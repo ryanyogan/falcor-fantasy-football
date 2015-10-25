@@ -1,0 +1,26 @@
+{
+  "name": "falcor-fantasy-football",
+  "version": "0.0.1",
+  "description": "A simple falcor data store for a sample Fantasy Football waiver list",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanyogan/falcor-fantasy-football.git"
+  },
+  "keywords": [
+    "Falcor",
+    "React",
+    "React-Router",
+    "Isomorphic",
+    "Node"
+  ],
+  "author": "Ryan Yogan <ryanyogan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryanyogan/falcor-fantasy-football/issues"
+  },
+  "homepage": "https://github.com/ryanyogan/falcor-fantasy-football#readme"
+}

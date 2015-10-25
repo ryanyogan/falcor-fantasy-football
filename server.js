@@ -17,12 +17,12 @@ const router = new Router([
   {
     route: 'players[{integers:playerIndexes}]["name"]',
     get: (pathSet) => {
-      return pathSet.playerIndexes.map((playerIndex) => {
+      return pathSet.playerIndexes.map(playerIndex => {
         if (initialData.players.length > playerIndex) {
-          return [].prototype.apply.push({
+          return {
             path: ['players', playerIndex, 'name'],
             value: initialData.players[playerIndex].name
-          });
+          }
         }
       });
     }
@@ -51,7 +51,7 @@ const router = new Router([
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/model.json', FalcorServer.dataSourceRoute(() => router ));
-app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + '/dist'));
 app.listen(9090, err => {
   if (err) {
     console.error(err);

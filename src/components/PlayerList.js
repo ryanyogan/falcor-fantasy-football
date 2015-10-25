@@ -1,5 +1,5 @@
 import React from 'react';
-import model from '../model.js';
+import model from '../model';
 
 export default class PlayerList extends React.Component {
   constructor(props) {

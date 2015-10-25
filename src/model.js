@@ -1,6 +1,8 @@
 import Falcor from 'falcor';
 import FalcorDataSource from 'falcor-http-datasource';
 
-export const model = new Falcor.Model({
+const model = new Falcor.Model({
   source: new FalcorDataSource('/model.json')
 });
+
+export default model

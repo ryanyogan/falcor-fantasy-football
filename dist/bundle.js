@@ -19751,7 +19751,9 @@
 	var model = new _falcor2['default'].Model({
 	  source: new _falcorHttpDatasource2['default']('/model.json')
 	});
-	exports.model = model;
+	
+	exports['default'] = model;
+	module.exports = exports['default'];
 
 /***/ },
 /* 160 */
@@ -46070,9 +46072,9 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _modelJs = __webpack_require__(159);
+	var _model = __webpack_require__(159);
 	
-	var _modelJs2 = _interopRequireDefault(_modelJs);
+	var _model2 = _interopRequireDefault(_model);
 	
 	var PlayerList = (function (_React$Component) {
 	  _inherits(PlayerList, _React$Component);
@@ -46116,8 +46118,8 @@
 	    value: function retrieveGraph() {
 	      var _this2 = this;
 	
-	      _modelJs2['default'].getValue(['players', 'length']).then(function (length) {
-	        return _modelJs2['default'].get(['players', { from: 0, to: length - 1 }, 'name']);
+	      _model2['default'].getValue(['players', 'length']).then(function (length) {
+	        return _model2['default'].get(['players', { from: 0, to: length - 1 }, 'name']);
 	      }).then(function (response) {
 	        return _this2.setState({ players: response.json.players });
 	      });

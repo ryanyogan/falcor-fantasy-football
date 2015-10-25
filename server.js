@@ -35,7 +35,7 @@ const router = new Router([
     route: 'players.add',
     call: (callPath, args) => {
       const newName = args[0];
-      initialData.players.concat({ name: newName });
+      initialData.players.push({ name: newName });
       return [
         {
           path: ['players', initialData.players.length - 1, 'name'],

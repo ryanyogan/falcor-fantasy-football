@@ -5,7 +5,7 @@ import PlayerList from './components/PlayerList';
 
 class PlayerManager extends React.Component {
   handleNameAdded() {
-    this.refs.playersList.update()
+    this.refs.playersList.retrieveGraph()
   }
 
   render() {
